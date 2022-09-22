@@ -15,4 +15,4 @@ sl.text('🥑 Avo on toast')
 sl.header('Build your own smoothie')
 sl.multiselect ('Pick your fruit: ', list(my_fruit_list['Fruit']), ['Avocado', 'Strawberries'])
 
-sl.dataframe(my_fruit_list)
+sl.dataframe(my_fruit_list['Fruit', 'Calories'])
