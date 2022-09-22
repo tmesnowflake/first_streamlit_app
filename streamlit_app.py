@@ -3,7 +3,7 @@ import streamlit as sl
 
 sl.title('Parents new healthy dinner')
 
-sl.header('Brekfast Favourites')
+sl.header('Breakfast Favourites')
 sl.text('🥣 Omega3 & Blueberry Waffles')
 sl.text('🥗 Kale, Spinach & rocket smoothie')
 sl.text('🐔 Boiled Free Range egg')
