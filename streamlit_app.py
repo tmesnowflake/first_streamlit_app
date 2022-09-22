@@ -13,6 +13,7 @@ sl.text('🐔 Boiled Free Range egg')
 sl.text('🥑 Avo on toast')
 
 sl.header('Build your own smoothie')
-sl.multiselect ('Pick your fruit: ', list(my_fruit_list['Fruit']), ['Avocado', 'Strawberries'])
+fruit_selected  = sl.multiselect ('Pick your fruit: ', list(my_fruit_list['Fruit']), ['Avocado', 'Strawberries'])
+fruit_to_show = my_fruit_list.loc[fruit_selected]
 
-sl.dataframe(my_fruit_list)
+sl.dataframe(fruit_to_show)
