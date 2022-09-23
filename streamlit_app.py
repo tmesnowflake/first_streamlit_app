@@ -20,5 +20,7 @@ fruit_to_show = my_fruit_list.loc[fruit_selected]
 sl.dataframe(fruit_to_show)
 
 
+
+sl.header('Fruit Advice! you fkn noobs')
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-sl.text(fruityvice_response)
+sl.text(fruityvice_response.json())
