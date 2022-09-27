@@ -68,11 +68,4 @@ if streamlit.button('Add a fruit to the list'):
   back_from_function = insert_row_snowflake(add_my_fruit)
   my_cnx.close()
   streamlit.text(back_from_function)
-my_cur = my_cnx.cursor()
-fruit_selected2  = sl.multiselect ('Pick your fruit: ', list(my_fruit_list.index))
-fruit_to_show2 = my_fruit_list.loc[fruit_selected2]
-sl.write('Thanks for choosing ',fruit_selected2)
-my_cur.execute("SELECT * from fruit_load_list")
-my_data_row = my_cur.fetchall()
-sl.text("List contains:")
-sl.dataframe(my_data_row)
+
