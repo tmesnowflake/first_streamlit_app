@@ -35,7 +35,7 @@ sl.dataframe(fv_normalised)
 my_cnx = snowflake.connector.connect(**sl.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 fruit_selected2  = sl.multiselect ('Pick your fruit: ', list(my_fruit_list.index))
-fruit_to_show2 = my_fruit_list2.loc[fruit_selected2]
+fruit_to_show2 = my_fruit_list.loc[fruit_selected2]
 my_cur.execute("SELECT * from fruit_load_list")
 my_data_row = my_cur.fetchall()
 sl.text("List contains:")
